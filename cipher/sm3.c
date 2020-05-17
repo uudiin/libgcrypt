@@ -61,7 +61,6 @@ static void
 sm3_init (void *context, unsigned int flags)
 {
   SM3_CONTEXT *hd = context;
-  unsigned int features = _gcry_get_hw_features ();
 
   (void)flags;
 
@@ -79,8 +78,6 @@ sm3_init (void *context, unsigned int flags)
   hd->bctx.count = 0;
   hd->bctx.blocksize_shift = _gcry_ctz(64);
   hd->bctx.bwrite = transform;
-
-  (void)features;
 }
 
 
