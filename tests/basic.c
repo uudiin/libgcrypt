@@ -9445,6 +9445,9 @@ check_ciphers (void)
     GCRY_CIPHER_GOST28147,
     GCRY_CIPHER_GOST28147_MESH,
 #endif
+#if USE_SM4
+    GCRY_CIPHER_SM4,
+#endif
     0
   };
   static const int algos2[] = {
